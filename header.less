@@ -1,0 +1,123 @@
+.lincoapp-header{
+    @headerHeight: 50px;
+
+    .box();
+    height: @headerHeight;
+    border-bottom: 1px solid @border;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+
+    h1{
+        width: 100%;
+        height: 100%;
+        line-height: @headerHeight;
+        font-size: 22px;
+        color: @blue;
+        text-align: center;
+    }
+
+    .logo{
+        display: block;
+        background: #fff url(img/logo.png) no-repeat @globalPadding center;
+        background-size: auto 25px;
+    }
+
+    .left, .right{
+        display: block;
+        width: 44px;
+        height: @headerHeight;
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        .box-sizing(border-box);
+    }
+
+    .left{
+        left: 0;
+    }
+
+    .right{
+        right: 0;
+    }
+
+    .ihome{
+        background: url(img/logo.png) no-repeat @globalPadding center;
+        background-size: auto 25px;
+    }
+
+    .ishare{
+        background: url(img/icon-share.png) no-repeat center;
+        background-size: 18px auto;
+    }
+
+    .iback{
+        background: url(img/icon-back-blue.png) no-repeat 10px center;
+        background-size: 12px auto;
+    }
+
+    .icenter{
+        right: 0;
+
+        &.logined{
+            background: initial;
+            .box();
+            .box-align();
+            .box-pack(end);
+
+            .u-img{
+                display: block;
+                margin-right: 12px;
+            }
+
+            .icon{
+                display: none;
+            }
+        }
+
+        &.dot{
+            .u-img::after{
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: -1px;
+                width: 6px;
+                height: 6px;
+                background: #DF425B;
+            }
+
+            &.red .u-img::after{
+                background: #DF425B;
+            }
+
+            &.green .u-img::after{
+                background: #41B351;
+            }
+        }
+
+        .u-img{
+            display: none;
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            img{
+                width: 100%;
+                border-radius: 100%;
+                overflow: hidden;
+            }
+        }
+
+        .icon{
+            display: block;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            margin-top: -10px;
+            width: 20px;
+            height: 20px;
+            background: url(img/icon-user-blue.png) no-repeat right center;
+            background-size: 20px;
+        }
+    }
+}

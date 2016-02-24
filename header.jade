@@ -1,0 +1,18 @@
+.lincoapp-header
+    //- Title
+    h1(class= title.className)= title.value
+
+    nav
+        //- Left btn
+        if(left.className)
+            a.left(class= left.className)
+        //- Right btn
+        if(right.className.indexOf('icenter') < 0)
+            //- Normal bnt
+            a.right(class= right.className)
+        else
+            //- Usercenter
+            a.right(class= right.className)
+                i.icon
+                .u-img
+                    img(src="images/face.jpg", alt="")

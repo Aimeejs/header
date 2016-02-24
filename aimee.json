@@ -1,0 +1,12 @@
+{
+  "name": "header",
+  "version": "1.0.4",
+  "description": "header",
+  "author": "gavinning",
+  "keywords": "header",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/aimeejs/header.git",
+    "bugs": "http:/github.com/aimeejs/header/issues"
+  }
+}
